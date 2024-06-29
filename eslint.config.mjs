@@ -11,7 +11,7 @@ export default [
       "no-unused-expressions": "error",
       "no-unused-vars": "error",
       "prefer-const": "error",
-      "no-console": 1,
+      "no-console": "off",
       "no-undef": 2,
     },
   },
