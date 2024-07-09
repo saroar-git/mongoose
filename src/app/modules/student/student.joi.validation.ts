@@ -1,6 +1,5 @@
 import Joi from 'joi'
 
-// creating schema validation using joi
 const userNameJoiSchema = Joi.object({
   firstName: Joi.string()
     .trim()

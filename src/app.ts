@@ -12,8 +12,7 @@ app.use(cors())
 app.use('/api/v1/students', StudentRoutes)
 
 app.get('/', (req: Request, res: Response) => {
-  const a = 10
-  res.send(a)
+  res.send('First mongoose app running!')
 })
 
 export default app
