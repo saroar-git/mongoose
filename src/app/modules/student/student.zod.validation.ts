@@ -41,6 +41,7 @@ const localGuardianZodSchema = z.object({
 // Main schema
 const studentZodSchema = z.object({
   id: z.string().nonempty('ID is required'),
+  password: z.string().min(6).max(15).nonempty('Password is required'),
   name: userZodNameSchema,
   gender: z.enum(['Male', 'Female', 'Other'], {
     message: '{VALUE} is not a valid input',
@@ -65,6 +66,7 @@ const studentZodSchema = z.object({
   localGuardian: localGuardianZodSchema,
   profileImage: z.string().optional(),
   isActive: z.enum(['active', 'blocked']).default('active'),
+  isDeleted: z.boolean().default(false),
 })
 
 export default studentZodSchema
